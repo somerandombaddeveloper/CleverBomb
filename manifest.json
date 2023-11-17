@@ -5,13 +5,30 @@
     "version": "1.0",
     "manifest_version": 2,
     "icon": {
-        "32":"cleverhack.png"
+        "32": "cleverhack.png"
     },
-    "content_scripts":[{
-        "matches": ["https://sso.fhsdschools.org/adfs/*"],
-        "js": ["main.js"]
-    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://sso.fhsdschools.org/adfs/*"
+            ],
+            "js": [
+                "main.js"
+            ]
+        }
+    ],
     "browser_action": {
         "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
     }
 }
