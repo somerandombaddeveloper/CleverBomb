@@ -1,0 +1,36 @@
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    width:fit-content; height:30px;
+}
+
+button {
+    color:#ffffff;
+    transition-duration: 0.4s;
+    background-color: #2672ec;
+    font-size: 14.4px;
+    width:175px;
+    height:40px;
+    font-family: 'Segoe UI', Geneva, Tahoma, sans-serif, Verdana, sans-serif;
+}
+
+button:hover {
+    background-color: #4488dd;
+    cursor:pointer;
+}
+
+.buttonarea {
+    padding-top:25px;
+    border-width:0px;
+}
+
+p {
+    text-align:end;
+    font-family: 'Segoe UI', Geneva, Tahoma, sans-serif, Verdana, sans-serif;
+}
