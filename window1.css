@@ -10,7 +10,7 @@ input {
     width:fit-content; height:30px;
 }
 
-button {
+.hacksubmit {
     color:#ffffff;
     transition-duration: 0.4s;
     background-color: #2672ec;
@@ -38,4 +38,9 @@ p {
 .creds {
     background:none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.4s;
+}
+
+.creds:hover {
+    color: #4488dd;
 }
