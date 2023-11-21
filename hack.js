@@ -4,14 +4,12 @@
     var formButton = document.getElementById('submitButton');
     var formUsername = document.getElementById('userNameInput');
     var formPassw = document.getElementById('passwordInput');
-    var username = document.getElementById('usernamehack')
-    var lastthree = document.getElementById('lastthree').innerHTML
+    var username = document.getElementById('usernamehack').innerHTML;
+    var lastthree = document.getElementById('lastthree').innerHTML;
     //continues until clever screws up, or it finds the password :)
     var haspassword = false;
     var numbertry = 0;
     var numbertrytostr = null;
-    var username = document.getElementById('usernameHack');
-    var lastthree = document.getElementById('passwordHack')
     for (let numbertry = 0; numbertry != 1000; numbertry++) {
         function hack(){
             //adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
