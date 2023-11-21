@@ -18,7 +18,8 @@
         }
     ],
     "browser_action": {
-        "default_popup": "index.html"
+        "default_popup": "index.html",
+        "defult_icon": "cleverhack.png"
     },
     "permissions": [
         "activeTab",
