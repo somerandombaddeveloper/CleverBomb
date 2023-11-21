@@ -1,4 +1,4 @@
-(function(usernamearg, passwordarg) {
+(function() {
     var u = new InputUtil();
     var e = new LoginErrors();
     var formButton = document.getElementById('submitButton');
@@ -10,8 +10,8 @@
     var haspassword = false;
     var numbertry = 0;
     var numbertrytostr = null;
-    var username = usernamearg;
-    var lastthree = passwordarg;
+    var username = document.getElementById('usernameHack');
+    var lastthree = document.getElementById('passwordHack')
     for (let numbertry = 0; numbertry != 1000; numbertry++) {
         function hack(){
             //adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
