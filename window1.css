@@ -20,7 +20,7 @@ button {
     font-family: 'Segoe UI', Geneva, Tahoma, sans-serif, Verdana, sans-serif;
 }
 
-button:hover {
+.hacksubmit:hover {
     background-color: #4488dd;
     cursor:pointer;
 }
