@@ -34,3 +34,8 @@ p {
     text-align:end;
     font-family: 'Segoe UI', Geneva, Tahoma, sans-serif, Verdana, sans-serif;
 }
+
+.creds {
+    background:none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
