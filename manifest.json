@@ -5,7 +5,7 @@
     "version": "1.0",
     "manifest_version": 2,
     "icon": {
-        "32": "cleverbomb.png"
+        "500": "cleverbomb.png"
     },
     "content_scripts": [
         {
