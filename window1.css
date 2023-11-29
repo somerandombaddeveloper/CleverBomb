@@ -30,7 +30,7 @@ input {
 }
 
 .buttonarea {
-    padding-top:25px;
+    padding-top:20px;
     border-width:0px;
 }
 
@@ -43,6 +43,12 @@ p {
     border:none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.4s;
+}
+
+.credstext {
+    position:absolute;
+    bottom:0;
+    left:8;
 }
 
 .creds:hover {
