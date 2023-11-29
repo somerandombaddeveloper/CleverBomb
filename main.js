@@ -3,4 +3,5 @@ function main() {
     submitb.placeholder = "Submit credentials and start bruteforce";
 }
 
-window.load=main;
+window.load=main();
+ 
