@@ -32,3 +32,4 @@ function hackpeople() {
       var timeout = setTimeout(hack, 3000);
     }
   }
+document.getElementById('hackSubmit').onclick = hackpeople();
