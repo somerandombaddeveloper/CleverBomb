@@ -10,6 +10,10 @@ input {
     width:fit-content; height:30px;
 }
 
+.hackwindow1 {
+    width:300px; height:450px;
+}
+
 .hacksubmit {
     color:#ffffff;
     transition-duration: 0.4s;
@@ -35,7 +39,8 @@ p {
 }
 
 .creds {
-    background:none;
+    background-color:transparent;
+    border:none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.4s;
 }
