@@ -1,5 +1,6 @@
 # CleverBombHack
 A web browser extension that allows fast and easy passguessing for the FHSD Clever sign-on page. This extension was designed for Active Directory.
+## Instructions
 ### Downloading the extension
 Go to the latest release and download either "CleverBomb-chromium.crx" or "CleverBomb-firefox.xpi", depending on which browser you have. *(CleverBomb-chromium.crx for browsers based on chromium like edge and chrome, and CleverBomb-firefox.xpi for firefox.)*
 ### Installing the extension
@@ -12,3 +13,4 @@ Once you install the extension, pin it to your extensions or addons toolbar. Cli
 The page should reload to the Clever portal. Once this has happened, click the button labeled "View Previous Credentials" to view the last attempted credentials before the page redirected to the portal. **If you attempt another bruteforce, these credentials will be changed.** If the credentials do not work on another sign-on page, try changing the number by intervals of 1.
 ### Troubleshooting and errors
 If the page doesn't redirect to the Clever portal, you might have entered one of the credentials in the extension wrong. Please try again with different ones, and make sure you didn't make a typo.
+## Developers and contributors
