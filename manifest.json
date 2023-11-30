@@ -4,9 +4,6 @@
    "description":"hack clever accounts >:)",
    "version":"1.0",
    "manifest_version":3,
-   "icon":{
-      "500":"cleverbomb.png"
-   },
    "action":{
       "default_popup":"index.html",
       "default_icon":"cleverbomb.png"
