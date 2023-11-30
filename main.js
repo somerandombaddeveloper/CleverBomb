@@ -23,7 +23,7 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 			numbertrytostr = String(numbertry);
 		}
 		var passreal = numbertrytostr + lastthree;
-		chrome.storage.sync.set({"passw":numbertrytostr} function() {
+		chrome.storage.sync.set({"passw":numbertrytostr}, function() {
 			//idk
 		});
 		formUsername.value = username;
