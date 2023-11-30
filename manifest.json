@@ -7,13 +7,6 @@
    "icon":{
       "500":"cleverbomb.png"
    },
-   "content_scripts":[
-      {
-         "matches":[
-            "https://sso.fhsdschools.org/adfs/*"
-         ]
-      }
-   ],
    "browser_action":{
       "default_popup":"index.html",
       "default_icon":"cleverbomb.png"
