@@ -12,6 +12,7 @@ input {
 
 .hackwindow1 {
     width:300px; height:450px;
+    visibility:none;
 }
 
 .hacksubmit {

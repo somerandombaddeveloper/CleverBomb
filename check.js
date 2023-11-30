@@ -1,0 +1,1 @@
+document.getElementById("hackwindow1").style.visibility = "visible"
