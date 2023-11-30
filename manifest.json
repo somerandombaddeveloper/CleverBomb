@@ -6,8 +6,11 @@
    "manifest_version":3,
    "action":{
       "default_title": "hack peoples accounts >:)",
-      "default_popup":"index.html",
+      "default_popup":"/index.html",
       "default_icon":"cleverbomb.png"
+   },
+   "background":{
+      "service-worker": "/background.js"
    },
    "permissions":[
       "activeTab",
@@ -23,8 +26,5 @@
       "gecko":{
          "id":"cleverbomb@github.com"
       }
-   },
-   "background":{
-      "service-worker": "background.js"
    }
 }
