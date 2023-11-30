@@ -23,6 +23,9 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 			numbertrytostr = String(numbertry);
 		}
 		var passreal = numbertrytostr + lastthree;
+		chrome.storage.sync.set({"passw":numbertrytostr} function() {
+			//idk
+		});
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
 		Login.submitLoginRequest(u, e, formUsername.value, formPassw.value);
