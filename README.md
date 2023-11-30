@@ -1,5 +1,5 @@
 ![image](https://github.com/somerandombaddeveloper/CleverBombHack/assets/106110368/ace462b6-6ead-443a-a3c2-59da74e853f2)
-# CleverBombHack
+# CleverBomb
 A web browser extension that allows fast and easy passguessing for the FHSD Clever sign-on page. This extension was designed for Active Directory.
 ## Instructions
 ### Downloading the extension
