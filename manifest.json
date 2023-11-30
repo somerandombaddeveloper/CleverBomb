@@ -14,11 +14,8 @@
       "scripting",
       "storage",
       "tabs",
-      "http://*/*",
+      "*",
       "unlimitedStorage"
-   ],
-   "host_permissions": [
-      "https://sso.fhsdschools.org/*"
    ],
    "browser_specific_settings":{
       "gecko":{
