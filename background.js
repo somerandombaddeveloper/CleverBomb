@@ -7,7 +7,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log(tabId);
             chrome.action.setIcon({
                 path :{
-                    "720": "cleverbomb.png"
+                    "128": "cleverbomb.png"
                 }
             });
         }
@@ -16,7 +16,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log(tabId);
             chrome.action.setIcon({
                 path :{
-                    "720": "cleverbomb-disabled.png"
+                    "128": "cleverbomb-disabled.png"
                 }
             });
         }
