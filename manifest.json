@@ -25,7 +25,6 @@
       }
    },
    "background":{
-      "service-worker": "background.js",
-      "type": "module"
+      "service-worker": "background.js"
    }
 }
