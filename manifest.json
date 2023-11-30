@@ -3,7 +3,7 @@
    "short_name":"CleverBomb",
    "description":"hack clever accounts >:)",
    "version":"1.0",
-   "manifest_version":2,
+   "manifest_version":3,
    "icon":{
       "500":"cleverbomb.png"
    },
@@ -11,7 +11,7 @@
       "matches": ["https://sso.fhsdschools.org/*"],
       "js":["check.js"]
    }],
-   "browser_action":{
+   "action":{
       "default_popup":"index.html",
       "default_icon":"cleverbomb.png"
    },
@@ -19,11 +19,10 @@
       "activeTab",
       "scripting",
       "storage",
-      "tabs",
-      "sso.fhsdschools.org"
+      "tabs"
    ],
-   "host_permissions":[
-      "*://*/*"
+   "host_permissions": [
+      "https://sso.fhsdschools.org/*"
    ],
    "browser_specific_settings":{
       "gecko":{
@@ -31,8 +30,7 @@
       }
    },
    "background":{
-      "scripts":[
-         "background.js"
-      ]
+      "service-worker": "background.js",
+      "type": "module"
    }
 }

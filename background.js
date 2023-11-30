@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener(function(message){
     if (message == "starthack"){
-        chrome.tabs.executeScript({
+        chrome.scripting.executeScript({
             file: 'main.js'
         });
     };
