@@ -1,5 +1,5 @@
-chrome.runtime.onMessage.addListener(function(message, callback){
-    if (message.text == "starthack"){
+chrome.runtime.onMessage.addListener(function(message){
+    if (message == "starthack"){
         chrome.tabs.executeScript({
             file: 'main.js'
         });
