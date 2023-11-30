@@ -11,7 +11,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log("Not on clever!")
             console.log(tabId);
             chrome.action.setIcon(
-                "cleverbomb-disabled.png";
+                "cleverbomb-disabled.png"
             );
         }
     }
