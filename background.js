@@ -5,7 +5,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         if (tab.url.includes(matchurl[i])){
             console.log("On clever!")
             console.log(tabId);
-            chrome.action.enable(tabId);
             chrome.action.setIcon(
                 "cleverbomb.png"
             );
@@ -13,7 +12,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         else {
             console.log("Not on clever!")
             console.log(tabId);
-            chrome.action.disable(tabId);
             chrome.action.setIcon(
                 "cleverbomb-disabled.png"
             );
