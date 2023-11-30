@@ -20,7 +20,3 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         }
     }
 })
-
-chrome.storage.sync.get(["passw"], function(modlastusedcreds) {
-    document.getElementById("credspassw").innerHTML = modlastusedcreds;
-});
