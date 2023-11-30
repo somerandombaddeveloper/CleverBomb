@@ -4,7 +4,7 @@ A web browser extension that allows fast and easy passguessing for the FHSD Clev
 ### Downloading the extension
 Go to the latest release and download either "CleverBomb-chromium.crx" or "CleverBomb-firefox.xpi", depending on which browser you have. *(CleverBomb-chromium.crx for browsers based on chromium like edge and chrome, and CleverBomb-firefox.xpi for firefox.)*
 ### Installation
-**Chromium instructions:** Enable developer mode on the extensions management page, and drag the .crx file into the window. It should appear in your extensions toolbar shortly after.
+**Chromium-based instructions:** Enable developer mode on the extensions management page, and drag the .crx file into the window. It should appear in your extensions toolbar shortly after.
 ###
 **Firefox instructions:** Go to about:addons, then click the gear icon, and select "Install from File", and select "CleverBomb.xpi."
 ### Using the extension
