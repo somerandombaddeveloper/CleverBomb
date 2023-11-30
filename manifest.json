@@ -14,8 +14,10 @@
       "scripting",
       "storage",
       "tabs",
-      "*",
       "unlimitedStorage"
+   ],
+   "host_permissions": [
+      "*"
    ],
    "browser_specific_settings":{
       "gecko":{
