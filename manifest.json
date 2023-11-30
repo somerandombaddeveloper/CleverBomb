@@ -5,6 +5,7 @@
    "version":"1.0",
    "manifest_version":3,
    "action":{
+      "default_title": "hack peoples accounts >:)",
       "default_popup":"index.html",
       "default_icon":"cleverbomb.png"
    },
@@ -13,6 +14,7 @@
       "scripting",
       "storage",
       "tabs",
+      "http://*/*",
       "unlimitedStorage"
    ],
    "host_permissions": [
