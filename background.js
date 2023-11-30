@@ -6,8 +6,8 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log("On clever!");
             console.log(tabId);
             chrome.action.setIcon({
-                "ImageData":{
-                    "720":"cleverbomb.png"
+                path :{
+                    "720": "cleverbomb.png"
                 }
             });
         }
@@ -15,8 +15,8 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log("Not on clever!")
             console.log(tabId);
             chrome.action.setIcon({
-                "ImageData":{
-                    "720":"cleverbomb-disabled.png"
+                path :{
+                    "720": "cleverbomb-disabled.png"
                 }
             });
         }
