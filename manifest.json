@@ -11,9 +11,6 @@
       {
          "matches":[
             "https://sso.fhsdschools.org/adfs/*"
-         ],
-         "js":[
-            "main.js"
          ]
       }
    ],
