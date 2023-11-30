@@ -5,14 +5,20 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         if (tab.url.includes(matchurl[i])){
             console.log("On clever!");
             console.log(tabId);
-            chrome.action.setIcon("cleverbomb.png");
+            chrome.action.setIcon({
+                "ImageData":{
+                    "720":"cleverbomb.png"
+                }
+            });
         }
         else {
             console.log("Not on clever!")
             console.log(tabId);
-            chrome.action.setIcon(
-                "cleverbomb-disabled.png"
-            );
+            chrome.action.setIcon({
+                "ImageData":{
+                    "720":"cleverbomb-disabled.png"
+                }
+            });
         }
     }
 })
