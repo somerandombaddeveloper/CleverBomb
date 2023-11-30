@@ -7,10 +7,6 @@
    "icon":{
       "500":"cleverbomb.png"
    },
-   "content_scripts": [{
-      "matches": ["https://sso.fhsdschools.org/*"],
-      "js":["check.js"]
-   }],
    "action":{
       "default_popup":"index.html",
       "default_icon":"cleverbomb.png"
