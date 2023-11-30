@@ -10,7 +10,7 @@
       "default_icon":"cleverbomb.png"
    },
    "background":{
-      "service-worker": "background.js"
+      "service_worker": "background.js"
    },
    "permissions":[
       "activeTab",
