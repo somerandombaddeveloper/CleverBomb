@@ -1,8 +1,8 @@
 let matchurl = ["://sso.fhsdschools.org/"];
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    for (let i in matches) {
-        if (tab.url.includes(matches[i])){
+    for (let i in matchurl) {
+        if (tab.url.includes(matchurl[i])){
             chrome.browserAction.enable(
                 tabId
             );
