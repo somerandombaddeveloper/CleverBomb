@@ -1,6 +1,6 @@
 let matchurl = ["://sso.fhsdschools.org/"];
 
-chrome.tabs.onActiveChanged.addListener((tabId, changeInfo, tab) => {
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     for (let i in matchurl) {
         chrome.runtime.sendMessage({wakeup:"wakeupnow"});
         if (tab.url.includes(matchurl[i])){
