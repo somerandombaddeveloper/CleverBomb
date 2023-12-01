@@ -11,7 +11,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 }
             });
             chrome.action.setPopup({
-                path: "index.html"
+                popup: "index.html"
             });
         }
         else {
@@ -23,9 +23,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 }
             });
             chrome.action.setPopup({
-                path: {
-                    ""
-                }
+                popup: ""
             })
         }
     }
