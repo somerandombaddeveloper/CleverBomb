@@ -22,6 +22,7 @@ input {
     font-size: 14.4px;
     width:175px;
     height:40px;
+    border-width:0;
     font-family: 'Segoe UI', Geneva, Tahoma, sans-serif, Verdana, sans-serif;
 }
 
@@ -45,6 +46,7 @@ p {
     transition-duration: 0.4s;
     width:175px;
     height:20px;
+    border-width:0;
 }
 
 .credstext {
@@ -54,5 +56,6 @@ p {
 }
 
 .creds:hover {
-    color: #4488dd;
+    background-color: #696969;
+    cursor:pointer;
 }
