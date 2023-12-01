@@ -6,19 +6,27 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             console.log("On clever!");
             console.log(tabId);
             chrome.action.setIcon({
-                path :{
+                path: {
                     "128": "cleverbomb.png"
                 }
             });
+            chrome.action.setPopup({
+                path: "index.html"
+            });
         }
         else {
-            console.log("Not on clever!")
+            console.log("Not on clever!");
             console.log(tabId);
             chrome.action.setIcon({
-                path :{
+                path: {
                     "128": "cleverbomb-disabled.png"
                 }
             });
+            chrome.action.setPopup({
+                path: {
+                    ""
+                }
+            })
         }
     }
 })
