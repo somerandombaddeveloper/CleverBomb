@@ -2,6 +2,7 @@ let matchurl = ["://sso.fhsdschools.org/"];
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     for (let i in matchurl) {
+        chrome.runtime.sendMessage({wakeup:"wakeupnow"});
         if (tab.url.includes(matchurl[i])){
             console.log("On clever!");
             console.log(tabId);
@@ -24,7 +25,10 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             });
             chrome.action.setPopup({
                 popup: ""
-            })
+            });
         }
+        chrome.runtime.onMessage.addListener(function() {
+            console.log("Waking up");
+        })
     }
 })

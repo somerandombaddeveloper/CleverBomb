@@ -17,7 +17,9 @@
       "scripting",
       "storage",
       "tabs",
-      "unlimitedStorage"
+      "unlimitedStorage",
+      "webNavigation",
+      "webRequest"
    ],
    "host_permissions": [
       "*://*/"
