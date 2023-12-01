@@ -32,7 +32,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         })
     }
 })
-chrome.onMessage.addListener(function(request, sender, sendResponse){
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     if (request.pressed == "start") {
         chrome.scripting.executeScript({
             files: ['main.js']
