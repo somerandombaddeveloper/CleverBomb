@@ -13,5 +13,4 @@ Once you install the extension, pin it to your extensions or addons toolbar. Cli
 ### Getting the credentials
 The page should reload to the Clever portal. Once this has happened, click the button labeled "View Previous Credentials" to view the last attempted credentials before the page redirected to the portal. **If you attempt another bruteforce, these credentials will be changed.** If the credentials do not work on another sign-on page, try changing the number by intervals of 1.
 ### Troubleshooting and errors
-If the page doesn't redirect to the Clever portal, you might have entered one of the credentials in the extension wrong. Please try again with different ones, and make sure you didn't make a typo.
-## Developers and contributors
+If the page doesn't redirect to the Clever portal, you might have entered one of the credentials in the extension wrong. Please try again with different ones, and make sure you didn't make a typo. If this doesn't work, please go to the extension manager in whatever browser you are using, and if there is an option to "inspect service worker" or "inspect background page", click that, and put any errors that are happening into the "Issues" page.
