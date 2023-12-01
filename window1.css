@@ -40,10 +40,11 @@ p {
 }
 
 .creds {
-    background-color:transparent;
-    border:none;
+    background-color:grey;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.4s;
+    width:175px;
+    height:40px;
 }
 
 .credstext {
