@@ -34,6 +34,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 })
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     if (request.pressed == "start") {
+        console.log("Injecting hack.js...")
         chrome.scripting.executeScript({
             files: ['main.js']
         });
