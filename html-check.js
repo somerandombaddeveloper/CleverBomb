@@ -1,6 +1,6 @@
-var hacksubmit = document.getElementById('hackSubmit')
+var hacksubmit = document.getElementById('hackSubmit');
 
 hacksubmit.onclick = function(){
-    console.log("html-check.js confirmed...")
+    console.log("html-check.js confirmed...");
     chrome.runtime.sendMessage({"pressed": "start"});
 }
