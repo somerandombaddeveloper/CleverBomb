@@ -33,9 +33,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 })
 
-Document.getElementById('creds').onclick(function() {
-    console.log("Injecting hack.js...")
-    chrome.scripting.executeScript({
-        files: ['main.js']
-    });
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.pressed = "start") {
+        console.log("Injecting hack.js...")
+        chrome.scripting.executeScript({
+            files: ['main.js']
+        });
+    }
 });
