@@ -1,3 +1,8 @@
+/*This script is used when it is injected into Clever.
+It is ran when the "start" button is clicked
+on the main popup. The script is unable to interact with the popup
+input boxes, so arguments have to be passed to it. */
+
 var u = new InputUtil();
 var e = new LoginErrors();
 var formButton = document.getElementById('submitButton');

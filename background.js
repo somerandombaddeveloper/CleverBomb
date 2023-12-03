@@ -1,3 +1,6 @@
+/* This script handles events made by html-check.js, and events that are fired by the user,
+like reloading the tab, or receiving a message from html-check.js. */
+
 let matchurl = ["://sso.fhsdschools.org/"];
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
