@@ -23,10 +23,5 @@
    ],
    "host_permissions": [
       "*://*/"
-   ],
-   "browser_specific_settings":{
-      "gecko":{
-         "id":"cleverbomb@github.com"
-      }
-   }
+   ]
 }
