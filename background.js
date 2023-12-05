@@ -48,6 +48,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         });
     }
     else {
-        console.log("Irrelevant message received from service worker. Check code to see if any messages are not being used!");
+        console.log("Irrelevant/unused message received from service worker. Check code to see if any messages are not being used!");
     }
 });
