@@ -10,8 +10,8 @@ var inputp;
 
 hacksubmit.onclick = function(){
     //Gets data from popup to use in bruteforce
-    inputu = chrome.storage.sync.get("userbox");
-    inputp = chrome.storage.sync.get("passbox");
+    inputu = chrome.storage.sync.set("userbox":link1.innerHTML);
+    inputp = chrome.storage.sync.set("passbox":hacksubmit.innerHTML);
     console.log("html-check.js confirmed...");
     chrome.runtime.sendMessage({"pressed": "start"});
     inputp = document.getElementById('');
