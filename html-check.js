@@ -9,6 +9,9 @@ var inputp;
 
 
 hacksubmit.onclick = function(){
+    //Gets data from popup to use in bruteforce
+    inputu = chrome.storage.sync.get("userbox");
+    inputp = chrome.storage.sync.get("passbox");
     console.log("html-check.js confirmed...");
     chrome.runtime.sendMessage({"pressed": "start"});
     inputp = document.getElementById('');
@@ -19,5 +22,5 @@ hacksubmit.onclick = function(){
 
 githublink.onclick = function() {
     console.log("Redirecting...");
-    chrome.tabs.create({url: "https://github.com/somerandombaddeveloper/cleverbomb"})
+    chrome.tabs.create({url: "https://github.com/somerandombaddeveloper/cleverbomb"});
 }
