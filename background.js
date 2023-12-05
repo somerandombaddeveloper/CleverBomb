@@ -38,7 +38,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.pressed = "start") {
-        console.log("Injecting hack.js...")
+        var lastthree = chrome.storage.sync.get("passbox");
+        var username chrome.storage.sync.get("userbox");
+        console.log("Injecting hack.js with credentials:");
+        console.log("Username:" + username);
+        console.log("Last three digits:" + lastthree);
         chrome.scripting.executeScript({
             files: ['main.js']
         });
