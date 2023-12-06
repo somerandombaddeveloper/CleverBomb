@@ -5,11 +5,11 @@ input boxes, so arguments have to be passed to it. */
 
 var u = new InputUtil();
 var e = new LoginErrors();
+//change this, don't know the real id of login form.
+var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
 var formPassw = document.getElementById('passwordInput');
-var username = document.getElementById('usernamehack').innerHTML;
-var lastthree = document.getElementById('lastthree').innerHTML;
 //continues until clever screws up, or it finds the password :)
 var haspassword = false;
 var numbertry = 0;
