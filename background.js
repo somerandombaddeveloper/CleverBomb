@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		var username2 = chrome.storage.sync.get("userbox");
         console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
-		console.log("Username:" + username);
+		console.log("Username:" + username2);
 		console.log("Last three digits:" + lastthree);
         function codeexec(uname, lthree) {
             var username = uname;
