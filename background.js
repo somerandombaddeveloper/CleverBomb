@@ -45,7 +45,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
 		console.log("Username:" + username2);
-		console.log("Last three digits:" + lastthree);
+		console.log("Last three digits:" + lastthree2);
         function codeexec(uname, lthree) {
             var username = uname;
             var lastthree = lthree;
