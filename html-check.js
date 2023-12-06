@@ -16,8 +16,6 @@ hacksubmit.onclick = function(){
     chrome.runtime.sendMessage({"pressed": "start"});
     inputp = document.getElementById('');
     inputu = document.getElementById('');
-    chrome.runtime.sendMessage({"username": inputu.innerHTML});
-    chrome.runtime.sendMessage({"password": inputp.innerHTML});
 }
 
 githublink.onclick = function() {
