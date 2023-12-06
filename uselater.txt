@@ -1,3 +1,1 @@
-chrome.storage.sync.get(["passw"], function(modlastusedcreds) {
-    document.getElementById("credspassw").innerHTML = modlastusedcreds;
-});
+
