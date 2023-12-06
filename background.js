@@ -45,7 +45,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         console.log("Last three digits:" + lastthree);
         chrome.scripting.executeScript({
             //runs code to add username and last three digits to the content script.
-            code: 'var uname = ' + username + '; var '
+            code: 'var username = ' + username + '; var lastthree = ' + lastthree + ';'
+        }, function() {
+            
         });
         chrome.scripting.executeScript({
             files: ['main.js']
