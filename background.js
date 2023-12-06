@@ -49,11 +49,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		console.log("Last three digits:" + lastthree);
 		chrome.scripting.executeScript({
 			"code": codeexec
-		}, function() {
-			chrome.scripting.executeScript({
-				files: ['main.js']
-			});
 		});
+        chrome.scripting.executeScript({
+            files: ['main.js']
+        });
         chrome.scripting.insertCSS({
             css: '.contentWrapper {background-color: #920313;}'
         })
