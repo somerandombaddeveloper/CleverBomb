@@ -39,6 +39,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	if (request.pressed = "start") {
+        //creates string for parameters, then changes background color to red of sign-on page to let user know hack is ready.
 		var lastthree = chrome.storage.sync.get("passbox");
 		var username = chrome.storage.sync.get("userbox");
         var codeexec = 'var username = ' + username + '; var lastthree = ' + lastthree + ';';
@@ -53,6 +54,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 				files: ['main.js']
 			});
 		});
+        chrome.scripting.insertCSS({
+            css: '.contentWrapper {background-color: #920313;}'
+        })
 	} else {
 		console.log("Irrelevant/unused message received from service worker. Check code to see if any messages are not being used!");
 	}
