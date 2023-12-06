@@ -4,50 +4,55 @@ like reloading the tab, or receiving a message from html-check.js. */
 let matchurl = ["://sso.fhsdschools.org/"];
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    for (let i in matchurl) {
-        chrome.runtime.sendMessage({wakeup:"wakeupnow"});
-        if (tab.url.includes(matchurl[i])){
-            console.log("On clever!");
-            console.log(tabId);
-            chrome.action.setIcon({
-                path: {
-                    "128": "cleverbomb.png"
-                }
-            });
-            chrome.action.setPopup({
-                popup: "index.html"
-            });
-        }
-        else {
-            console.log("Not on clever!");
-            console.log(tabId);
-            chrome.action.setIcon({
-                path: {
-                    "128": "cleverbomb-disabled.png"
-                }
-            });
-            chrome.action.setPopup({
-                popup: ""
-            });
-        }
-        chrome.runtime.onMessage.addListener(function() {
-            console.log("Waking up");
-        })
-    }
+	for (let i in matchurl) {
+		chrome.runtime.sendMessage({
+			wakeup: "wakeupnow"
+		});
+		if (tab.url.includes(matchurl[i])) {
+			console.log("On clever!");
+			console.log(tabId);
+			chrome.action.setIcon({
+				path: {
+					"128": "cleverbomb.png"
+				}
+			});
+			chrome.action.setPopup({
+				popup: "index.html"
+			});
+		} else {
+			console.log("Not on clever!");
+			console.log(tabId);
+			chrome.action.setIcon({
+				path: {
+					"128": "cleverbomb-disabled.png"
+				}
+			});
+			chrome.action.setPopup({
+				popup: ""
+			});
+		}
+		chrome.runtime.onMessage.addListener(function() {
+			console.log("Waking up");
+		})
+	}
 })
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request.pressed = "start") {
-        var lastthree = chrome.storage.sync.get("passbox");
-        var username chrome.storage.sync.get("userbox");
-        console.log("Injecting hack.js with credentials:");
-        console.log("Username:" + username);
-        console.log("Last three digits:" + lastthree);
-        chrome.scripting.executeScript({
-            files: ['main.js']
-        });
-    }
-    else {
-        console.log("Irrelevant/unused message received from service worker. Check code to see if any messages are not being used!");
-    }
+	if (request.pressed = "start") {
+		var lastthree = chrome.storage.sync.get("passbox");
+		var username chrome.storage.sync.get("userbox");
+		console.log("Injecting hack.js with credentials:");
+		console.log("Username:" + username);
+		console.log("Last three digits:" + lastthree);
+		chrome.scripting.executeScript({
+			//runs code to add username and last three digits to the content script.
+			code: 'var username = ' + username + '; var lastthree = ' + lastthree + ';'
+		}, function() {
+			chrome.scripting.executeScript({
+				files: ['main.js']
+			});
+		});
+	} else {
+		console.log("Irrelevant/unused message received from service worker. Check code to see if any messages are not being used!");
+	}
 });
