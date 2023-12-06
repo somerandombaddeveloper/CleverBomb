@@ -41,12 +41,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	if (request.pressed = "start") {
 		var lastthree = chrome.storage.sync.get("passbox");
 		var username = chrome.storage.sync.get("userbox");
+        var codeexec = 'var username = ' + username + '; var lastthree = ' + lastthree + ';';
+        console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
 		console.log("Username:" + username);
 		console.log("Last three digits:" + lastthree);
 		chrome.scripting.executeScript({
-			//runs code to add username and last three digits to the content script.
-			code: 'var username = ' + username + '; var lastthree = ' + lastthree + ';'
+			code: codeexec
 		}, function() {
 			chrome.scripting.executeScript({
 				files: ['main.js']
