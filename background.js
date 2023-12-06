@@ -42,8 +42,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         //creates string for parameters, then changes background color to red of sign-on page to let user know hack is ready.
 		var lastthree2 = chrome.storage.sync.get("passbox");
 		var username2 = chrome.storage.sync.get("userbox");
+        var tabid2;
         chrome.tabs.query({active:true, currentWindow: true}, function(tabs) {
-            var tabid2 = tabs[0].tabId;
+            tabid2 = tabs[0].id;
         });
         console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
