@@ -58,19 +58,19 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
 		chrome.scripting.executeScript({
             target: {
-                tabId: actiontab.tabId
+                tabId: actiontab
             },
 			func: codeexec(username2, lastthree2)
 		});
         chrome.scripting.executeScript({
             target: {
-                tabId: actiontab.tabId
+                tabId: actiontab
             },
             files: ['main.js']
         });
         chrome.scripting.insertCSS({
             target: {
-                tabId: actiontab.tabId
+                tabId: actiontab
             },
             css: '.contentWrapper {background-color: #920313;}'
         })
