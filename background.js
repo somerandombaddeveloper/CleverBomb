@@ -3,6 +3,8 @@ like reloading the tab, or receiving a message from html-check.js. */
 
 let matchurl = ["://sso.fhsdschools.org/"];
 
+var actiontab;
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	for (let i in matchurl) {
 		chrome.runtime.sendMessage({
@@ -37,15 +39,15 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	}
 })
 
+chrome.browserAction.onClick.addListener((tabbaction) => {
+	actiontab = tabbaction.tabId;
+});
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	if (request.pressed = "start") {
         //creates string for parameters, then changes background color to red of sign-on page to let user know hack is ready.
 		var lastthree2 = chrome.storage.sync.get("passbox");
 		var username2 = chrome.storage.sync.get("userbox");
-        var tabid2;
-        chrome.tabs.query({active:true, currentWindow: true}, function(tabs) {
-            tabid2 = tabs[0];
-        });
         console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
 		console.log("Username:" + username2);
@@ -56,19 +58,19 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
 		chrome.scripting.executeScript({
             target: {
-                tabId: tabid2.tabId
+                tabId: actiontab.tabId
             },
 			func: codeexec(username2, lastthree2)
 		});
         chrome.scripting.executeScript({
             target: {
-                tabId: tabid2.tabId
+                tabId: actiontab.tabId
             },
             files: ['main.js']
         });
         chrome.scripting.insertCSS({
             target: {
-                tabId: tabid2.tabId
+                tabId: actiontab.tabId
             },
             css: '.contentWrapper {background-color: #920313;}'
         })
