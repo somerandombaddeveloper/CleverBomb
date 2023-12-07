@@ -52,25 +52,26 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		console.log("Injecting hack.js with credentials:");
 		console.log("Username:" + username2);
 		console.log("Last three digits:" + lastthree2);
+		console.log("Tab ID: " + actiontab);
         function codeexec(uname, lthree) {
             var username = uname;
             var lastthree = lthree;
         }
 		chrome.scripting.executeScript({
             target: {
-                tabId: actiontab
+                "tabId": actiontab
             },
 			func: codeexec(username2, lastthree2)
 		});
         chrome.scripting.executeScript({
             target: {
-                tabId: actiontab
+                "tabId": actiontab
             },
             files: ['main.js']
         });
         chrome.scripting.insertCSS({
             target: {
-                tabId: actiontab
+                "tabId": actiontab
             },
             css: '.contentWrapper {background-color: #920313;}'
         })
