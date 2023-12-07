@@ -39,7 +39,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	}
 })
 
-chrome.browserAction.onClicked.addListener((tabbaction) => {
+chrome.action.onClicked.addListener((tabbaction) => {
 	actiontab = tabbaction.tabId;
 });
 
