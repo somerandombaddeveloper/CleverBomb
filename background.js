@@ -41,6 +41,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.action.onClicked.addListener((tabbaction) => {
 	actiontab = tabbaction.tabId;
+	console.log("Tab ID From browserAction: " + tabbaction.tabId);
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
