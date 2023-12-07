@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		var username2 = chrome.storage.sync.get("userbox");
         var tabid2;
         chrome.tabs.query({active:true, currentWindow: true}, function(tabs) {
-            tabid2 = tabs[0].id;
+            tabid2 = tabs[0];
         });
         console.log(codeexec);
 		console.log("Injecting hack.js with credentials:");
@@ -56,19 +56,19 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
 		chrome.scripting.executeScript({
             target: {
-                tabId: tabid2
+                tabId: tabid2.tabId
             },
 			func: codeexec(username2, lastthree2)
 		});
         chrome.scripting.executeScript({
             target: {
-                tabId: tabid2
+                tabId: tabid2.tabId
             },
             files: ['main.js']
         });
         chrome.scripting.insertCSS({
             target: {
-                tabId: tabid2
+                tabId: tabid2.tabId
             },
             css: '.contentWrapper {background-color: #920313;}'
         })
