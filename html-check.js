@@ -9,9 +9,9 @@ var inputp;
 
 
 hacksubmit.onclick = function(){
-    //Gets data from popup to use in bruteforce
-    inputu = chrome.storage.sync.set({"userbox":link1.innerHTML});
-    inputp = chrome.storage.sync.set({"passbox":hacksubmit.innerHTML});
+    //Gets data from popup input boxes to use in bruteforce
+    inputu = chrome.storage.sync.set({"userbox":link1.value});
+    inputp = chrome.storage.sync.set({"passbox":hacksubmit.value});
     console.log("html-check.js has confirmed button click. Sending data to service worker...");
     chrome.runtime.sendMessage({"pressed": "start"});
     inputp = document.getElementById('');

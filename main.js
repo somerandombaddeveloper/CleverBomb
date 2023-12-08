@@ -4,6 +4,12 @@ on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
 console.log("Script Injection Successful.");
 //change this, don't know the real id of login form.
+chrome.storage.sync.get("userbox", function(data1) {
+	var username = data1;
+})
+chrome.storage.sync.get("passbox", function(data2) {
+	var lastthree = data2;
+})
 var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
@@ -37,7 +43,7 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		formPassw.value = numbertrytostr;
 		//prevent page refresh
 		form.preventDefault();
-		Login.submitLoginRequest(u, e, formUsername.value, formPassw.value);
+		Login.submitLoginRequest(null, null, formUsername.value, formPassw.value);
 		console.log('Testing password:');
 		console.log(passreal);
 	}
