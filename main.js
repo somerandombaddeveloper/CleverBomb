@@ -2,6 +2,9 @@
 It is ran when the "start" button is clicked
 on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
+
+//We're going to eventually have to append this to the page
+
 console.log("Script Injection Successful.");
 var username;
 var lastthree;
