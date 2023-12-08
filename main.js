@@ -2,7 +2,7 @@
 It is ran when the "start" button is clicked
 on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
-
+console.log("Script Injection Successful.");
 var u = new InputUtil();
 var e = new LoginErrors();
 //change this, don't know the real id of login form.
