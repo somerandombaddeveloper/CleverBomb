@@ -3,12 +3,13 @@ It is ran when the "start" button is clicked
 on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
 console.log("Script Injection Successful.");
-//change this, don't know the real id of login form.
+var username = data1.userbox;
+var lastthree = data2.passbox;
 chrome.storage.sync.get("userbox", function(data1) {
-	var username = data1.userbox;
+	username = data1.userbox;
 })
 chrome.storage.sync.get("passbox", function(data2) {
-	var lastthree = data2.passbox;
+	lastthree = data2.passbox;
 })
 console.log("Confirming bruteforce with credentials:");
 console.log("Username: " + username);
