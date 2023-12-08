@@ -5,11 +5,14 @@ input boxes, so arguments have to be passed to it. */
 console.log("Script Injection Successful.");
 //change this, don't know the real id of login form.
 chrome.storage.sync.get("userbox", function(data1) {
-	var username = data1;
+	var username = data1.userbox;
 })
 chrome.storage.sync.get("passbox", function(data2) {
-	var lastthree = data2;
+	var lastthree = data2.passbox;
 })
+console.log("Confirming bruteforce with credentials:");
+console.log("Username: " + username);
+console.log("Password: " + lastthree);
 var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
