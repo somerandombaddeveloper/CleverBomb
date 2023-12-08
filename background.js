@@ -3,13 +3,14 @@ like reloading the tab, or receiving a message from html-check.js. */
 
 let matchurl = ["://sso.fhsdschools.org/"];
 
-var actiontab;
+var browserid;
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	for (let i in matchurl) {
 		chrome.runtime.sendMessage({
 			wakeup: "wakeupnow"
 		});
+		browserid = tabId;
 		if (tab.url.includes(matchurl[i])) {
 			console.log("On clever!");
 			console.log(tabId);
@@ -39,13 +40,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	}
 })
 
-chrome.action.onClicked.addListener(function (tabbaction){
-	actiontab = tabbaction.id;
-	console.log("Tab ID From browserAction: " + tabbaction.id);
-});
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	if (request.pressed = "start") {
+		var actiontab = browserid;
         //creates string for parameters, then changes background color to red of sign-on page to let user know hack is ready.
 		var lastthree2 = chrome.storage.sync.get("passbox");
 		var username2 = chrome.storage.sync.get("userbox");
