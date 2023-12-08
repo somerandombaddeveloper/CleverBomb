@@ -66,7 +66,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             target: {
                 "tabId": actiontab
             },
-            css: '.contentWrapper {background-color: #920313;}'
+            css: '.contentWrapper {background-color: #920313 !important;}'
         })
 	} else {
 		console.log("Irrelevant/unused message received from service worker. Check code to see if any messages are not being used!");
