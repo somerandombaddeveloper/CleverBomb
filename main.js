@@ -3,8 +3,8 @@ It is ran when the "start" button is clicked
 on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
 console.log("Script Injection Successful.");
-var username = data1.userbox;
-var lastthree = data2.passbox;
+var username;
+var lastthree;
 chrome.storage.sync.get("userbox", function(data1) {
 	username = data1.userbox;
 })
