@@ -55,16 +55,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             var username = uname;
             var lastthree = lthree;
         }
-		chrome.scripting.executeScript({
-            target: {
-                "tabId": actiontab
-            },
-			func: codeexec(username2, lastthree2)
-		});
         chrome.scripting.executeScript({
             target: {
                 "tabId": actiontab
             },
+			func: codeexec(username2, lastthree2),
             files: ['main.js']
         });
         chrome.scripting.insertCSS({
