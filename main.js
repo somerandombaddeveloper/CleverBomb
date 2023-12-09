@@ -47,7 +47,6 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
 		//prevent page refresh, and click button from script to prevent errors
-		form.preventDefault();
 		formButton.addEventListener("click", function(){
 			return false;
 		});
