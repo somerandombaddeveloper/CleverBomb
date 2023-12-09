@@ -48,7 +48,7 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		formPassw.value = passreal;
 		//prevent page refresh, and click button from script to prevent errors
 		formButton.addEventListener("click", function(){
-			return false;
+			console.log('Button clicked');
 		});
 		console.log('Testing password:');
 		console.log(passreal);
