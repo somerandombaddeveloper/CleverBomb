@@ -4,14 +4,14 @@ or content script. */
 
 var hacksubmit = document.getElementById('hackSubmit');
 var link1 = document.getElementById('githublink');
-var inputu;
-var inputp;
+var inputu = document.getElementById('usernamehack')
+var inputp = document.getElementById('lastthree')
 
 
 hacksubmit.onclick = function(){
     //Gets data from popup input boxes to use in bruteforce
-    inputu = chrome.storage.sync.set({"userbox":link1.value});
-    inputp = chrome.storage.sync.set({"passbox":hacksubmit.value});
+    inputu = chrome.storage.sync.set({"userbox":inputu.value});
+    inputp = chrome.storage.sync.set({"passbox":inputp.value});
     console.log("html-check.js has confirmed button click. Sending data to service worker...");
     chrome.runtime.sendMessage({"pressed": "start"});
     inputp = document.getElementById('');
