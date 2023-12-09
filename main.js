@@ -47,6 +47,7 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		formUsername.value = username;
 		formPassw.value = passreal;
 		//prevent page refresh, and click button from script to prevent errors
+		formButton.click();
 		formButton.addEventListener("click", function(){
 			console.log('Button clicked');
 		});
