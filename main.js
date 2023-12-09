@@ -41,7 +41,7 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 			numbertrytostr = String(numbertry);
 			//Adds no zeroes
 		}
-		var passreal = numbertrytostr + lastthree;
+		var passreal = "Fhsd" + numbertrytostr + lastthree;
 		chrome.storage.sync.set({"passw":numbertrytostr}, function() {
 			//idk
 		});
