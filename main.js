@@ -15,6 +15,7 @@ chrome.storage.sync.get("passbox", function(data2) {
 console.log("Confirming bruteforce with credentials:");
 console.log("Username: " + username);
 console.log("Password: " + lastthree);
+//edits properties of password input so user can see what password is being attempted
 var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
