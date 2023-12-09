@@ -4,6 +4,7 @@
    "description":"hack clever accounts >:)",
    "version":"1.0",
    "manifest_version":3,
+   "web_accessible_resources": ["main.js"],
    "action":{
       "default_title": "CleverBomb",
       "default_popup":"index.html",

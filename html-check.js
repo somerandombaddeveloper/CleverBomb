@@ -4,9 +4,8 @@ or content script. */
 
 var hacksubmit = document.getElementById('hackSubmit');
 var link1 = document.getElementById('githublink');
-var inputu = document.getElementById('usernamehack')
-var inputp = document.getElementById('lastthree')
-
+var inputu = document.getElementById('usernamehack');
+var inputp = document.getElementById('lastthree');
 
 hacksubmit.onclick = function(){
     //Gets data from popup input boxes to use in bruteforce

