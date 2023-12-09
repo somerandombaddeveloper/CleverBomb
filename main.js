@@ -48,7 +48,9 @@ for (let numbertry = 0; numbertry != 1000; numbertry++) {
 		formPassw.value = numbertrytostr;
 		//prevent page refresh, and click button from script to prevent errors
 		form.preventDefault();
-		formButton.click();
+		formButton.addEventListener("click", function(){
+			return false;
+		});
 		console.log('Testing password:');
 		console.log(passreal);
 	}
