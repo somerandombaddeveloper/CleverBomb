@@ -24,7 +24,7 @@ console.log('Script injection confirmed.');
 var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
-for (let numbertry = 0; numbertry != 1000; numbertry++) {
+for (let numbertry = 0; numbertry != 999; numbertry++) {
 	function hack() {
 		//adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
 		numbertry = numbertry + 1;
