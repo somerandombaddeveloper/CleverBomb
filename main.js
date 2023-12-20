@@ -4,6 +4,7 @@ on the main popup. The script is unable to interact with the popup
 input boxes, so arguments have to be passed to it. */
 
 console.log("Injection complete.");
+var timeout;
 var username;
 var lastthree;
 chrome.storage.sync.get("userbox", function(data1) {
@@ -55,5 +56,5 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		console.log('Testing password:');
 		console.log(passreal);
 	}
-	var timeout = setTimeout(hack, 3000);
+	timeout = setTimeout(hack, 3000);
 }
