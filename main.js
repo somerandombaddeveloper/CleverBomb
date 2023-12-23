@@ -28,9 +28,10 @@ var numbertry = 0;
 var numbertrytostr = null;
 for (let numbertry = 0; numbertry != 999; numbertry++) {
 	function timeoutfunc() {
-		setInterval(function() {
+		console.info("delay");
+		setInterval( function() {
 			hack(numbertry);
-		}, 1000)
+		},1000);
 	}
 	timeoutfunc();
 }
