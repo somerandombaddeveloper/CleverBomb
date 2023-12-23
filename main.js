@@ -22,6 +22,8 @@ var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
 var formPassw = document.getElementById('passwordInput');
 //continues until clever screws up, or it finds the password :)
+//changes type attribute of password box to make it easier to debug
+formPassw.type = "";
 console.log('Script injection confirmed.');
 var haspassword = false;
 var numbertry = 0;
