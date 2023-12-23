@@ -31,7 +31,7 @@ var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	function timeoutfunc() {
 		console.info("delay");
-		setInterval(function() {
+		window.setInterval(function() {
 			console.info("delay confirmed");
 			hack(numbertry);
 		}, 1000);
