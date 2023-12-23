@@ -27,7 +27,7 @@ var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
 for (let numbertry = 0; numbertry != 999; numbertry++) {
-	function hack() {
+	setTimeout(function() {
 		//adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
 		numbertry = numbertry + 1;
 		if (numbertry >= 1 && numbertry << 10) {
@@ -55,6 +55,5 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		});
 		console.log('Testing password:');
 		console.log(passreal);
-	}
-	timeout = setInterval('hack();', 1000);
+	}, 2000);
 }
