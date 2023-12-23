@@ -30,10 +30,7 @@ var numbertry = 0;
 var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	console.info("delay");
-	window.setInterval(function() {
-		console.info("delay confirmed");
-		hack(numbertry);
-	}, 1000);
+	setInterval(hack, 1000);
 }
 
 function hack(numbertryarg) {
