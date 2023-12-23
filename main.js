@@ -56,5 +56,5 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		console.log('Testing password:');
 		console.log(passreal);
 	}
-	timeout = setTimeout(hack, 1000);
+	timeout = setInterval(hack, 1000);
 }
