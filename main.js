@@ -28,7 +28,7 @@ console.log('Script injection confirmed.');
 var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
-for (let numbertry = 0; numbertry != 999; numbertry++) {
+for (let numbertry = 0; numbertry <= 999; numbertry++) {
 	function timeoutfunc() {
 		console.info("delay");
 		setInterval( function() {
