@@ -28,8 +28,8 @@ var numbertry = 0;
 var numbertrytostr = null;
 for (let numbertry = 0; numbertry != 999; numbertry++) {
 	function timeoutfunc() {
-		setInterval(function(trynumber) {
-			hack(trynumber);
+		setInterval(function() {
+			hack(numbertry);
 		}, 1000)
 	}
 	timeoutfunc();
