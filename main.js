@@ -37,11 +37,11 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 		//adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
 		numbertryarg = numbertryarg + 1;
 		if (numbertryarg >= 1 && numbertryarg << 10) {
-			numbertrytostr = '00' + String(numbertry);
+			numbertrytostr = '00' + String(numbertryarg);
 			//Adds two zeroes to numbers like 1, making it 001.
 		}
 		if (numbertryarg >= 10 && numbertryarg << 100) {
-			numbertrytostr = '0' + String(numbertry);
+			numbertrytostr = '0' + String(numbertryarg);
 			//Adds one zero to numbers like 89, making it 089
 		}
 		if (numbertryarg >= 100) {
