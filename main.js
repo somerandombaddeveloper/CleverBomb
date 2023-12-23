@@ -30,6 +30,7 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 	function timeoutfunc() {
 		console.info("delay");
 		setInterval( function() {
+			console.info("delay confirmed");
 			hack(numbertry);
 		},1000);
 	}
