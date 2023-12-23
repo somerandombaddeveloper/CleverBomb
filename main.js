@@ -32,7 +32,9 @@ for (let numbertry = 0; numbertry != 999; numbertry++) {
 			hack(trynumber);
 		}, 1000)
 	}
+	timeoutfunc();
 }
+
 	function hack(numbertryarg) {
 		//adds one to variable, then uses those digits for the password. the if statements add extra zeroes for lunch numbers where the first three digits are under 100.
 		numbertryarg = numbertryarg + 1;
