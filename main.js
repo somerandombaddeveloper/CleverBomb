@@ -29,14 +29,11 @@ var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
-	function timeoutfunc() {
-		console.info("delay");
-		window.setInterval(function() {
-			console.info("delay confirmed");
-			hack(numbertry);
-		}, 1000);
-	}
-	timeoutfunc();
+	console.info("delay");
+	window.setInterval(function() {
+		console.info("delay confirmed");
+		hack(numbertry);
+	}, 1000);
 }
 
 function hack(numbertryarg) {
