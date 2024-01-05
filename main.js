@@ -47,5 +47,5 @@ function runhack() {
 
 function hack(numbertryarg) {
 	console.info('function hack() ran');
-	clearInterval(timewait);
+	clearInterval();
 }
