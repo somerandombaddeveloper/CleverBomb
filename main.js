@@ -43,9 +43,11 @@ for (var numbertry = 0; numbertry <= 999; numbertry++) {
 
 function runhack() {
 	var timewait = setInterval(hack, 4000);
+	return;
 }
 
 function hack(numbertryarg) {
 	console.info('function hack() ran');
 	clearInterval();
+	return;
 }
