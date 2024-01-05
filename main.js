@@ -21,6 +21,8 @@ var form = document.getElementById('loginForm');
 var formButton = document.getElementById('submitButton');
 var formUsername = document.getElementById('userNameInput');
 var formPassw = document.getElementById('passwordInput');
+var breakHack = "Replace with chrome.storage.sync.get when ready";
+var running;
 //continues until clever screws up, or it finds the password :)
 //changes type attribute of password box to make it easier to debug
 formPassw.type = "";
@@ -31,8 +33,14 @@ var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	console.info("delay");
 	setInterval(hack, 1000);
+	//breaks if stop button is clicked
+	if (breakHack == "abort") {
+		console.info("Hack aborted.");
+	}
+	var running = true;
+	//add switch statement in hack function to handle errors.
 }
 
 function hack(numbertryarg) {
-	console.info('function hack() ran')
+	console.info('function hack() ran');
 }
