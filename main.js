@@ -34,5 +34,5 @@ for (var numbertry = 0; numbertry <= 999; numbertry++) {
 }
 
 function hack(numbertryarg) {
-	
+	console.info('function hack() ran')
 }
