@@ -41,13 +41,8 @@ for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	//add switch statement in hack function to handle errors.
 }
 
-function runhack() {
-	var timewait = setInterval(hack, 4000);
-	return;
-}
-
 function hack(numbertryarg) {
-	console.info('function hack() ran');
-	clearInterval();
-	return;
+	setTimeout(() => {
+		console.info('function hack() ran');
+	}, 5000);
 }
