@@ -42,7 +42,7 @@ for (var numbertry = 0; numbertry <= 999; numbertry++) {
 }
 
 function runhack() {
-	setInterval(hack, 4000);
+	setTimeout(hack, 4000);
 }
 
 function hack(numbertryarg) {
