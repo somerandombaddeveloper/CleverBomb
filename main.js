@@ -31,16 +31,18 @@ var haspassword = false;
 var numbertry = 0;
 var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
-	console.info("delay");
-	setInterval(function () {
-		console.info('settimeout is weird');
-	}, 5000);
+	console.log('for');
+	runhack();
 	//breaks if stop button is clicked
 	if (breakHack == "abort") {
 		console.info("Hack aborted.");
 	}
 	var running = true;
 	//add switch statement in hack function to handle errors.
+}
+
+function runhack() {
+	setInterval(hack, 4000);
 }
 
 function hack(numbertryarg) {
