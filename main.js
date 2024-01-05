@@ -32,7 +32,7 @@ var numbertry = 0;
 var numbertrytostr = null;
 for (var numbertry = 0; numbertry <= 999; numbertry++) {
 	console.info("delay");
-	setTimeout(function () {
+	setInterval(function () {
 		console.info('settimeout is weird');
 	}, 5000);
 	//breaks if stop button is clicked
